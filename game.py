@@ -1,39 +1,7 @@
 def game_intro():
-    print("You're Detective Riley Stone, called to the scene of a high-profile case: the disappearance of Clara Voss, a tech CEO staying at the Verdant Hotel.A storm is rolling in. You light a cigarette and step inside.")
+    print("You're Detective Riley Stone, called to the scene of a high-profile case: the disappearance of Clara Voss, a tech CEO staying at the Verdant Hotel. A storm is rolling in. You light a cigarette and step inside.")
 
-
-def hotel_room():
-    print("It's spotless. Too clean. A half-burned note is in the trash. The balcony door is open.\n")
-
-def note():
-    print('''Note says: “Meet me at 3 a.m. - R” 
-You check the timestamp—it's 2:45 a.m. now.\n''')
-    
-def roof_top():
-    print("You find a dropped earring and a scratched phone. You call the last number dialed—it belongs to Clara's CFO. Suspicious. \n")
-
-def confront_cfo():
-    print(''' You storm the CFO's apartment. He's burning files when you arrive.
-He tries to flee—but backup arrives just in time.
-He confesses: He planned to take over Clara's company.
-You recover stolen data and close the case.
-✅ Case closed. Good job, detective.
-''')
-    
-def back_to_office():
-    print('''You dig deeper and discover that Clara faked her disappearance to expose illegal activity from inside.
-She contacts you anonymously with a flash drive.
-You help publish her findings and arrest half the board.
-🔥 Secret ending unlocked: The Whistleblower.
-''')
-    
-def press_harder():
-    print('''He panics and says she left with a man in gray. You access security footage.
-You get a license plate. Time to chase a new lead. 🎉 ''')
-
-print('The Vanishing at Verdant Hotel - Extended Cut' )
-play_again = 'yes'
-while play_again == 'yes':
+def main_game():
     name = input('Your name: ')
     inventory = []
     print(f'Hi {name}! Welcome to my game. Do you wanna play? (yes/no)' )
@@ -123,6 +91,39 @@ while play_again == 'yes':
         quit()
     else:
         print('Invalid command! ')
+def hotel_room():
+    print("It's spotless. Too clean. A half-burned note is in the trash. The balcony door is open.\n")
+
+def note():
+    print('''Note says: “Meet me at 3 a.m. - R” 
+You check the timestamp—it's 2:45 a.m. now.\n''')
+    
+def roof_top():
+    print("You find a dropped earring and a scratched phone. You call the last number dialed—it belongs to Clara's CFO. Suspicious. \n")
+
+def confront_cfo():
+    print(''' You storm the CFO's apartment. He's burning files when you arrive.
+He tries to flee—but backup arrives just in time.
+He confesses: He planned to take over Clara's company.
+You recover stolen data and close the case.
+✅ Case closed. Good job, detective.
+''')
+    
+def back_to_office():
+    print('''You dig deeper and discover that Clara faked her disappearance to expose illegal activity from inside.
+She contacts you anonymously with a flash drive.
+You help publish her findings and arrest half the board.
+🔥 Secret ending unlocked: The Whistleblower.
+''')
+    
+def press_harder():
+    print('''He panics and says she left with a man in gray. You access security footage.
+You get a license plate. Time to chase a new lead. 🎉 ''')
+
+print('The Vanishing at Verdant Hotel - Extended Cut' )
+play_again = 'yes'
+while play_again == 'yes':
+    main_game()
 
     play_again = input("Do you want to play again? (yes/no): ").lower().strip()
     if play_again != 'yes':
