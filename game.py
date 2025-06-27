@@ -35,6 +35,7 @@ print('The Vanishing at Verdant Hotel - Extended Cut' )
 play_again = 'yes'
 while play_again == 'yes':
     name = input('Your name: ')
+    inventory = []
     print(f'Hi {name}! Welcome to my game. Do you wanna play? (yes/no)' )
     answer = input('> ').lower().strip()
     if answer == 'yes':
@@ -54,6 +55,8 @@ while play_again == 'yes':
             answer = input("Enter '1' or '2': ").lower().strip()
             if answer == '1':
                 note()
+                inventory.append('note')
+                print('You read the note ')
                 print('''Do you want to ? 
                 1. 🕒 Go to the rooftop early?
                 2. 👁️ Wait and watch the balcony to see who arrives?
@@ -79,6 +82,9 @@ while play_again == 'yes':
                         2. 🥷 Follow the figure? ''')
                     answer = input("Enter '1' or '2': ").lower().strip()
                     if answer == '1':
+                        inventory.append('flash drive' )
+                        print(f'Inventory: {inventory}')
+                        print('You examine the flash drive...')
                         print('Inside the flash drive are company secrets Clara uncovered. You expose a conspiracy. Case closed. 🎉')
                     elif answer == '2':
                         print("You lose them in the streets. You're mugged and left in an alley. Game Over.")
@@ -117,7 +123,7 @@ while play_again == 'yes':
         quit()
     else:
         print('Invalid command! ')
-        
+
     play_again = input("Do you want to play again? (yes/no): ").lower().strip()
     if play_again != 'yes':
         print('Game Over! Bye Detective. 🫡')
